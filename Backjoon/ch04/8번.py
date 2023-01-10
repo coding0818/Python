@@ -10,5 +10,5 @@ for k in arr:
             count += 1
             score += count
         else:
-            count == 0
+            count = 0
     print(score)
