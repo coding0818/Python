@@ -7,15 +7,17 @@ def solve(n):
 
     return n+a+b+c+d+e
 
-all = [i+1 for i in range(10000)]
+all = [i for i in range(1,10001)]
 selfnumber = []
 for k in all:
     c = solve(k)
     if c<=10000:
         selfnumber.append(c)
 
-for j in selfnumber:
-    all.remove(j)
+selfnumber = set(selfnumber)
+selfnumber = list(selfnumber)
 
-for ans in all:
-    print(ans)
+ans = [a for a in all if a not in selfnumber]
+
+for s in ans:
+    print(s)
